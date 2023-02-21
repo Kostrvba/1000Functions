@@ -1,7 +1,6 @@
-
 import random
+import string
 from math import sqrt
-
 
 
 def printer():
@@ -417,4 +416,116 @@ def breaker():
 
 print(breaker())
 
-#50!!!!!
+
+# 50!!!!!
+
+def if_elif_else(x):
+    if x > 1:
+        return "lower"
+    elif x == 1:
+        return "1!"
+    else:
+        return "bigger"
+
+
+print(if_elif_else(0))
+
+
+def for_else(table):
+    for i in table:
+        if i == 3:
+            return "there is 3"
+            break
+        else:
+            return "no 3"
+
+
+print(for_else([1, 2, 4, 5]))
+
+
+def even_or_odd(number):
+    if (number % 2) == 0:
+        return "Even"
+    elif (number % 2) == 1:
+        return "Odd"
+
+
+print(even_or_odd(3))
+
+
+def str_count(strng, letter):
+    i = 0
+    z = 0
+    for letters in strng:
+        if letter == strng[z]:
+            i += 1
+        z += 1
+    return i
+
+
+print(str_count("Tato", "a"))
+
+
+def mean(x, y):
+    return (x + y) / 2
+
+
+print(mean(2, 4))
+
+
+def mean_from_list(my_list):
+    numbers = len(my_list)
+    z = 0
+    for i in range(numbers):
+        z = z + my_list[i]
+    return z / numbers
+
+
+print(mean_from_list([4, 6, 8]))
+
+
+def volume(x, y, z):
+    vol = x * y * z
+    return vol
+
+
+print(volume(5, 8, 10))
+
+
+def five_random_letters():
+    letters_list = []
+    for i in range(5):
+        x = random.choice(string.ascii_letters)
+        letters_list.append(x)
+    return letters_list
+
+
+print(five_random_letters())
+
+
+def small_letters(x):
+    return x.lower()
+
+
+print(small_letters('YrUT'))
+
+
+def big_letters(x):
+    return x.upper()
+
+
+print(big_letters('yRut'))
+
+#60!!!!!!
+
+def change_letters(x):
+    x_list = list(x)
+    length = len(x_list)
+    for i in range(length):
+        if x_list[i].isupper():
+            x_list[i] = x_list[i].lower()
+        elif x_list[i].islower():
+            x_list[i] = x_list[i].upper()
+    return ''.join(x_list)
+
+print(change_letters("rTrY"))
