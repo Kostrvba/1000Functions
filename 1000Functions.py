@@ -1,6 +1,7 @@
 import random
 import string
 from math import sqrt
+from datetime import datetime
 
 
 def printer():
@@ -516,7 +517,8 @@ def big_letters(x):
 
 print(big_letters('yRut'))
 
-#60!!!!!!
+
+# 60!!!!!!
 
 def change_letters(x):
     x_list = list(x)
@@ -528,4 +530,109 @@ def change_letters(x):
             x_list[i] = x_list[i].upper()
     return ''.join(x_list)
 
+
 print(change_letters("rTrY"))
+
+
+def describe_age(age):
+    x = "kid" if age <= 12 else "teen" if age <= 17 else "adult" if age <= 64 else "elder"
+    return f"You're {x}"
+
+
+print(describe_age(18))
+
+
+def sort_by_last_letter(s):
+    def last_letter(word):
+        return word[-1]
+
+    return sorted(s.split(), key=last_letter)
+
+
+print(sort_by_last_letter("Hello men i need a taxi"))
+
+
+def format_duration(seconds):
+    result_message = []
+    year_result = seconds // 31536000
+    day_result = (seconds % 31536000) // 86400
+    hour_result = (seconds % 86400) // 3600
+    rest = seconds % 3600
+    minutes_result = rest // 60
+    end_seconds = rest % 60
+
+    if year_result > 0:
+        result_message.append(f"{year_result} year" + ("s" if year_result > 1 else ""))
+
+    if day_result > 0:
+        result_message.append(f"{day_result} day" + ("s" if day_result > 1 else ""))
+
+    if hour_result > 0:
+        result_message.append(f"{hour_result} hour" + ("s" if hour_result > 1 else ""))
+
+    if minutes_result > 0:
+        result_message.append(f"{minutes_result} minute" + ("s" if minutes_result > 1 else ""))
+
+    if end_seconds > 0:
+        result_message.append(f"{end_seconds} second" + ("s" if end_seconds > 1 else ""))
+
+    if len(result_message) == 0:
+        return "now"
+    elif len(result_message) == 1:
+        return result_message[0]
+    else:
+        return ", ".join(result_message[:-1]) + " and " + result_message[-1]
+
+
+print(format_duration(73826478))
+
+
+def what_time():
+    now = datetime.now()
+    return now.strftime("%H:%M:%S")
+
+
+print(what_time())
+
+
+def dice(many_numbers, throws):
+    result = 0
+    for throw in range(throws):
+        numb = random.randint(1, many_numbers)
+        result = result + numb
+    return result
+
+
+print(dice(6, 2))
+
+
+def binary(x):
+    binar = bin(x)
+    return binar
+
+
+print(binary(34))
+
+
+def count_bits(n):
+    binary = bin(n)
+    length = len(binary)
+    count = 0
+    for i in range(length):
+        if binary[i] == '1':
+            count += 1
+    return count
+
+
+print(count_bits(34))
+
+
+def is_isogram(word):
+    return len(word) == len(set(word.lower()))
+
+
+print(is_isogram("Kapelusz"))
+
+#70!!!!!!!
+
+
