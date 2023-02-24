@@ -633,6 +633,53 @@ def is_isogram(word):
 
 print(is_isogram("Kapelusz"))
 
-#70!!!!!!!
 
+# 70!!!!!!!
+
+def dictionary(x, y):
+    dic = {
+        x: y
+    }
+    return dic
+
+
+print(dictionary("Ford", "mustang"))
+
+
+def C_to_K(x):
+    k = x + 273
+    return k
+
+
+print(C_to_K(15))
+
+
+def C_to_F(x):
+    f = (x * 9 / 5) + 32
+    return f
+
+
+print(C_to_F(15))
+
+
+def draw_square(x):
+    word = ""
+    for i in range(x):
+        word = word + ("*" * x + "\n")
+    return word
+
+
+print(draw_square(3))
+
+
+def draw_triangle(x):
+    word = ""
+    i = 0
+    while i <= x:
+        word = word + (f"*" * i + "\n")
+        i += 1
+    return word
+
+
+print(draw_triangle(4))
 
