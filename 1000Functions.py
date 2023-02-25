@@ -683,3 +683,15 @@ def draw_triangle(x):
 
 print(draw_triangle(4))
 
+
+def remove_consecutive_duplicates(s):
+    words = s.split()
+    table = []
+    none = None
+    for word in words:
+        if word != none:
+            table.append(word)
+            none = word
+
+    return ' '.join(table)
+
