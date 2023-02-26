@@ -686,12 +686,18 @@ print(draw_triangle(4))
 
 def remove_consecutive_duplicates(s):
     words = s.split()
-    table = []
+    tab = []
     none = None
     for word in words:
         if word != none:
-            table.append(word)
+            tab.append(word)
             none = word
 
-    return ' '.join(table)
+    return ' '.join(tab)
 
+
+def to_jaden_case(words):
+    return string.capwords(words)
+
+
+print(to_jaden_case("One two three"))
