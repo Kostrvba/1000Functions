@@ -701,3 +701,18 @@ def to_jaden_case(words):
 
 
 print(to_jaden_case("One two three"))
+
+add_one = lambda x: x + 1
+print(add_one(2))
+
+short_printer = lambda: print("1000 functions")
+short_printer()
+
+
+def backwords_words(x):
+    return x[::-1]
+
+
+print(backwords_words("Hello how are you?"))
+# 80!!!!!!!!
+
