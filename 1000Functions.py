@@ -714,5 +714,25 @@ def backwords_words(x):
 
 
 print(backwords_words("Hello how are you?"))
+
+
 # 80!!!!!!!!
 
+def count_sheeps(arrayOfSheeps):
+    return arrayOfSheeps.count(True)
+
+
+print(count_sheeps([True, True, True, False]))
+
+
+def narcissistic(value):
+    return value == sum([int(x) ** len(str(value)) for x in str(value)])
+
+
+print(narcissistic(153))
+
+def list_comprehensions(x):
+    result = [2 * i for i in range(x)]
+    return result
+
+print(list_comprehensions(4))
