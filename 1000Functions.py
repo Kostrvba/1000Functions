@@ -731,8 +731,28 @@ def narcissistic(value):
 
 print(narcissistic(153))
 
+
 def list_comprehensions(x):
     result = [2 * i for i in range(x)]
     return result
 
+
 print(list_comprehensions(4))
+
+
+def fun_function():
+    print("I have a lot of fun")
+
+
+def dekor(function):
+    def result():
+        print("a looooooot of")
+        return function()
+
+    return result()
+
+
+funnier_function = dekor(fun_function())
+funnier_function()
+
+
