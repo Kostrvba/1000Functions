@@ -411,8 +411,7 @@ def breaker():
         x += 1
         if x == 5:
             break
-            return x
-    return x
+        return x
 
 
 print(breaker())
@@ -436,7 +435,6 @@ def for_else(table):
     for i in table:
         if i == 3:
             return "there is 3"
-            break
         else:
             return "no 3"
 
@@ -740,19 +738,49 @@ def list_comprehensions(x):
 print(list_comprehensions(4))
 
 
-def fun_function():
-    print("I have a lot of fun")
-
-
 def dekor(function):
-    def result():
-        print("a looooooot of")
-        return function()
+    def wrapper():
+        print("I have a lot of fun")
+        function()
 
-    return result()
-
-
-funnier_function = dekor(fun_function())
-funnier_function()
+    return wrapper
 
 
+@dekor
+def fun_function():
+    print("a loooot of")
+
+
+fun_function()
+
+
+class Parent:
+    def __init__(self, message):
+        self.message = message
+
+    def dziedziczenie(self):
+        print(f'dziedziczę {self.message}')
+
+
+def inherited(message):
+    class Child(Parent):
+        def __init__(self, message):
+            super().__init__(message)
+
+    obj = Child(message)
+    obj.dziedziczenie()
+    return obj
+
+
+print(inherited("od taty"))
+
+
+def print_test():
+    return "test?"
+
+print(print_test())
+
+def repeat_str(repeat: int, string: str) -> str:
+    return string * repeat
+
+print(repeat_str(3, "HI"))
