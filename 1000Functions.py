@@ -774,13 +774,13 @@ def inherited(message):
 
 print(inherited("od taty"))
 
+
 def repeat_str(repeat: int, string: str) -> str:
     return string * repeat
 
+
 print(repeat_str(3, "HI"))
 
-def get_status(is_busy):
-    status = "busy" if is_busy else "available"
-    return {"status": status}
 
-#90!!!!!!!!!
+
+# 89!!!!!!!!!
