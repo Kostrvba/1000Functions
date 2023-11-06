@@ -783,4 +783,10 @@ print(repeat_str(3, "HI"))
 
 
 
-# 89!!!!!!!!!
+def make_negative( number ):
+    if number > 0:
+        return -number
+    else:
+        return number
+
+    #90
