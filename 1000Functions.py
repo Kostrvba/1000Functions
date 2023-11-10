@@ -790,3 +790,6 @@ def make_negative( number ):
         return number
 
     #90
+
+def solution(string):
+    return string[::-1]
